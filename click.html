@@ -169,13 +169,21 @@
     </style>
 
     <script>
-var A =0;
-var B =0;
-var C =0;
+var A = 0;
+var B = 0;
+var C = 0;
 
 function countClick() {
-    A++;
+    A = A + 1;
+
 }
+
+function showCount() {
+    document.getElementById("thing1") .innerHTML = "You clicked " + A + "times!";
+
+    
+    {
+        
         
     </script>
 </head>
@@ -189,23 +197,22 @@ function countClick() {
 
 
 
-    <div class="informationDisplay">
+    <div class="informationDisplay" id="thing1"> 
         Use the buttons below to activate the tracker!
-
       
    </div>
 
 
 
     <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-       <button class="displayButton">
-
+       <button class="displayButton"> Show A
+        
 
        </button> 
     </div>
 
     <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick();"> Press this button to add 1 to A
 
 
         </button>
