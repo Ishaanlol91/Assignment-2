@@ -173,21 +173,46 @@ var A = 0;
 var B = 0;
 var C = 0;
 
-function countClick() {
-    A = A + 1;
-    A = A + 4;
-
-}
-
 function countClick1() {
-    A = A * 2;
+    A = A + 1;
 }
 
 function countClick2() {
-    B = B + 1;
-    B = B + 4;
+    A = A + 5;
 }
-    
+function countClick3() {
+    A = A * 2;
+}
+
+function countClick4() {
+    B = B + 1;
+}
+
+function countClick5() {
+    B = B + 5;
+}
+
+function countClick6() {
+    B = B * 2;
+}
+
+function countClick7() {
+    A = A + 100;
+    B = B + 100;
+    C = C + 100;
+}
+
+function countClick8() {
+    A = A * 5;
+    B = B * 5;
+    C = C * 5;
+}
+
+function countClick9() {
+    A = A * 0;
+    B = B * 0;
+    C = C * 0;
+}
 
 function showCount() {
     document.getElementById("thing1").innerHTML = "You clicked " + A + "times!";
@@ -195,6 +220,10 @@ function showCount() {
 function showCount1() {
     document.getElementById("thing2").innerHTML = "You clicked " + B + "times!";
 }
+function showCount2() {
+    document.getElementById("thing3").innerHTML = "You clicked " + C + "times!";
+}
+    
     </script>
 </head>
 
@@ -224,14 +253,14 @@ Shows the clicks of B
     </div>
 
     <div class="button2"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button id="myId" onclick = "countClick();"> Press this button to add 1 to A
+        <button id="myId" onclick = "countClick1();"> Press this button to add 1 to A
 
 
         </button>
     </div>
 
     <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button id="myId" onclick = "countClick();"> Press this button to add 5 to A
+        <button id="myId" onclick = "countClick2();"> Press this button to add 5 to A
 
 
         </button>
@@ -240,7 +269,7 @@ Shows the clicks of B
     </div>
 
     <div class="button4" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button id="myId" onclick = "countClick1();"> Press this button to multiple A 2 times
+        <button id="myId" onclick = "countClick3();"> Press this button to multiple A 2 times
 
 
         </button>
@@ -256,28 +285,28 @@ Shows the clicks of B
 
     </div>
     <div class="button6" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button id="myId" onclick = "countClick2();"> Press this button to add 1 to B
+        <button id="myId" onclick = "countClick4();"> Press this button to add 1 to B
 
 
         </button>
 
     </div>
     <div class="button7" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button id="myId" onclick = "countClick2();"> Press this button to add 5 to B
+        <button id="myId" onclick = "countClick5();"> Press this button to add 5 to B
 
 
         </button>
 
     </div>
     <div class="button8" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick6();"> Press this button to multiple B 2 times
 
 
         </button>
 
     </div>
     <div class="button9" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button  class="displayButton">
+        <button  class="displayButton" onclick = "showCount2();"> Show C
 
 
         </button>
@@ -285,29 +314,29 @@ Shows the clicks of B
     </div>
 
     <div class="button10" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick7();"> Press this button to add 100 to all letters
 
 
         </button>
 
     </div>
     <div class="button11" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick8();"> Press this button to multiple all letters by 5
 
 
         </button>
 
     </div>
     <div class="button12" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick9();"> Press this button to reset all letters
 
 
         </button>
 
     </div>
 
-    <div class="footer">
-        
+    <div class="footer" id="thing3";>
+        Shows the clicks of C
     </div>
     
 </body>
