@@ -175,37 +175,49 @@ var C = 0;
 
 function countClick() {
     A = A + 1;
+    A = A + 4;
 
 }
 
-function showCount() {
-    document.getElementById("thing1") .innerHTML = "You clicked " + A + "times!";
+function countClick1() {
+    A = A * 2;
+}
 
+function countClick2() {
+    B = B + 1;
+    B = B + 4;
+}
     
-    {
-        
-        
+
+function showCount() {
+    document.getElementById("thing1").innerHTML = "You clicked " + A + "times!";
+}
+function showCount1() {
+    document.getElementById("thing2").innerHTML = "You clicked " + B + "times!";
+}
     </script>
 </head>
 
 <body>
-    <div class="title">
+    <div class="title" id="thing2";>
          TRIPLE NUMBER TRACKER
-
+Shows the clicks of B
        
     </div>
 
 
 
-    <div class="informationDisplay" id="thing1"> 
+    <div class="informationDisplay" id="thing1";>
+        
         Use the buttons below to activate the tracker!
+        Shows the clicks of A
       
    </div>
 
 
 
     <div class="button1"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-       <button class="displayButton"> Show A
+       <button class="displayButton" onclick="showCount()"> Show A
         
 
        </button> 
@@ -219,7 +231,7 @@ function showCount() {
     </div>
 
     <div class="button3"  onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick();"> Press this button to add 5 to A
 
 
         </button>
@@ -228,7 +240,7 @@ function showCount() {
     </div>
 
     <div class="button4" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick1();"> Press this button to multiple A 2 times
 
 
         </button>
@@ -237,21 +249,21 @@ function showCount() {
    
     
     <div class="button5" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button class="displayButton">
+        <button class ="displayButton" onclick="showCount1()">Show B
 
 
         </button>
 
     </div>
     <div class="button6" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick2();"> Press this button to add 1 to B
 
 
         </button>
 
     </div>
     <div class="button7" onmouseenter = "this.style='border: 3px solid #0088aa;';" onmouseleave = "this.style='border: 3px solid #000000;';" >
-        <button>
+        <button id="myId" onclick = "countClick2();"> Press this button to add 5 to B
 
 
         </button>
